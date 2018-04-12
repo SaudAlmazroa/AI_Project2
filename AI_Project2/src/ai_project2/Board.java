@@ -16,7 +16,7 @@ public class Board {
 
     Piece[][] board; // for printing
     ArrayList<Piece> white =new ArrayList<Piece>();
-    ArrayList<Piece> black =new ArrayList<Piece>();;
+    ArrayList<Piece> black =new ArrayList<Piece>();
 
     public Board() { //initial Board
         board = new Piece[8][8];
@@ -78,6 +78,24 @@ public class Board {
                 }
             }
         }
+    }
+    
+    public int numberOfKings(boolean turn){
+        int count = 0;
+        if(turn){
+            for(Piece p: black){
+                if(p.isKing){
+                    count+=2;
+                }
+            }
+        } else{
+            for(Piece p: white){
+                if(p.isKing){
+                    count+=2;
+                }
+            }
+        }
+        return count;
     }
 
     public String toString() {
