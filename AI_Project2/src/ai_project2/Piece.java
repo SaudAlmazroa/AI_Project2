@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 public class Piece {
 
-    Coordinate coordinate; //x, y
+    Coordinate coordinate; //row, column
     boolean isKing;
-    boolean color; //0 is white, 1 is black
+    boolean color; //false is white, true is black
     boolean isEmpty = false;
 
     public Piece() {

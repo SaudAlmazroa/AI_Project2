@@ -4,32 +4,26 @@ import java.util.ArrayList;
 
 public class Node {
     Node parent;
-    Board nodeBoard;
+    Board board;
     int score;
 
-    public Node(Board currentBoard) {
-        this.nodeBoard = currentBoard;
-        parent = null;
-        score = eval(currentBoard);
-    }
-    
     public Node(Node parent, Board currentBoard) {
-        this.nodeBoard = currentBoard;
+        this.board = currentBoard;
         this.parent = parent;
         score = eval(currentBoard);
     }
     
-    public int eval(Board nodeBoard){
-        int currentScore = heuristicA(nodeBoard);
-        
+    public int eval(Board board){
+        int currentScore = heuristicA(board);
+        currentScore += heuristicB(board);
         return currentScore;
     }
     
-    public int heuristicA(Board nodeBoard){
-        return nodeBoard.black.size()-nodeBoard.white.size();
+    public int heuristicA(Board board){
+        return board.black.size()-board.white.size();
     }
     
-    public int heuristicB(Board nodeBoard){
-        
+    public int heuristicB(Board board){
+        return board.numberOfKings(true)-board.numberOfKings(false);
     }
 }

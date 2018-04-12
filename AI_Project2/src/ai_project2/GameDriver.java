@@ -1,23 +1,19 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ai_project2;
 
-/**
- *
- * @author hp
- */
+import java.util.Scanner;
+
 public class GameDriver {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
       Board board = new Board();
         System.out.println(board);
-        System.out.println(new Piece(new Coordinate(0, 1), false, true));
+        System.out.println("\nChoose difficulty: -\n0: Easy\n1: Hard");
+        Scanner s = new Scanner(System.in);
+        int difficulty = s.nextInt();
+        if(difficulty == 0){
+            
+        } else {
+            
+        }
     }
-    
 }

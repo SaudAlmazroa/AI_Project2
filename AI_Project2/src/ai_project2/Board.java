@@ -8,10 +8,6 @@ package ai_project2;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-/**
- *
- * @author hp
- */
 public class Board {
 
     Piece[][] board; // for printing
