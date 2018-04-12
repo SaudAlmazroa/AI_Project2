@@ -9,13 +9,15 @@ package ai_project2;
  *
  * @author hp
  */
-public class AI_Project2 {
+public class GameDriver {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+      Board board = new Board();
+        System.out.println(board);
+        System.out.println(new Piece(new Coordinate(0, 1), false, true));
     }
     
 }
